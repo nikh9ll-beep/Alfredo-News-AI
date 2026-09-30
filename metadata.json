@@ -1,0 +1,6 @@
+{
+  "name": "AlfredoNews AI",
+  "description": "Financial News Simplifier: AI-powered financial news platform that converts complex financial articles into concise, easy-to-understand explanations with key takeaways, glossary terms, and market impact analysis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

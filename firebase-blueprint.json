@@ -1,0 +1,44 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "maxLength": 128 },
+        "displayName": { "type": "string", "maxLength": 100 },
+        "email": { "type": "string", "maxLength": 150 },
+        "photoURL": { "type": "string", "maxLength": 500 },
+        "createdAt": { "type": "string", "maxLength": 64 }
+      },
+      "required": ["uid", "email"]
+    },
+    "SavedArticle": {
+      "title": "Saved Article",
+      "description": "An article bookmarked by a user",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "title": { "type": "string", "maxLength": 500 },
+        "summary": { "type": "string", "maxLength": 5000 },
+        "source": { "type": "string", "maxLength": 100 },
+        "url": { "type": "string", "maxLength": 1000 },
+        "published_at": { "type": "string", "maxLength": 64 },
+        "category": { "type": "string", "maxLength": 50 },
+        "savedAt": { "type": "string", "maxLength": 64 }
+      },
+      "required": ["id", "userId", "title", "url", "savedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile document storing basic account details"
+    },
+    "/users/{userId}/saved_articles/{articleId}": {
+      "schema": "SavedArticle",
+      "description": "User's bookmarked financial stories and simplifications"
+    }
+  }
+}

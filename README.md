@@ -134,3 +134,6 @@ uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload
 2. **Number Preservation**: Preserves basis points, monetary valuations, and percentages.
 3. **Verified Market Impacts**: Explicitly reports *"Market impact cannot be determined from the available article."* if not directly stated.
 4. **Jargon Translation**: Automatically identifies financial terms and defines them in plain English.
+   
+**Documatation**
+https://docs.google.com/document/d/1KAtasFbSvMBQY3dh5ADMalGav3xyLWuu/edit?usp=sharing&ouid=106867099021527122133&rtpof=true&sd=true
